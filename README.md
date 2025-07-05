@@ -74,4 +74,17 @@ python dupcleaner.py /pfad/zum/verzeichnis --clean --trash-dir /pfad/zum/papierk
 
 	pyinstaller --onefile --name dupcleaner dupcleaner.py
 
+### by the way
+Das geht sequentiell, Dateisystem-Zugriffe sind der Flaschenhals, nicht SQLite.  
+SQLite ist einfach: keine Server-Installation.  
+SQL-Filter für Gruppierung nach Größe/Name/Datum sind schnell.  
+Hash nur auf gleich große Dateien: spart massiv Zeit.
+Dateigröße zuerst filtern, dann optional Dateiname, dann Hash.  
+Chunked Hashing: große Dateien Stück für Stück lesen.  
+Threads: Paralleles Hashing kann helfen (aber I/O ist meist der Engpass).  
+Manche Ordner (z. B. /proc, /sys unter Linux) enthalten keine echten Dateien.  
+Symbolische Links können Endlosschleifen erzeugen.  
+Rechteprobleme (Dateien, die du nicht lesen darfst).  
+
+
 
