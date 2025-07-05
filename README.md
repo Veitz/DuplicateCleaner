@@ -82,7 +82,7 @@ Hash nur auf gleich große Dateien: spart massiv Zeit.
 Dateigröße zuerst filtern, dann optional Dateiname, dann Hash.  
 Chunked Hashing: große Dateien Stück für Stück lesen.  
 Threads: Paralleles Hashing kann helfen (aber I/O ist meist der Engpass).  
-Manche Ordner (z. B. /proc, /sys unter Linux) enthalten keine echten Dateien.  
+Manche Ordner (/proc, /sys unter Linux) enthalten keine echten Dateien.  
 Symbolische Links können Endlosschleifen erzeugen.  
 Rechteprobleme (Dateien, die du nicht lesen darfst).  
 
