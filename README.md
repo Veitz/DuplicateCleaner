@@ -78,7 +78,7 @@ python dupcleaner.py /pfad/zum/verzeichnis --clean --trash-dir /pfad/zum/papierk
 Das geht sequentiell, Dateisystem-Zugriffe sind der Flaschenhals, nicht SQLite.  
 SQLite ist einfach: keine Server-Installation.  
 SQL-Filter für Gruppierung nach Größe/Name/Datum sind schnell.  
-Hash nur auf gleich große Dateien: spart massiv Zeit.
+Hash nur auf gleich große Dateien: spart massiv Zeit.  
 Dateigröße zuerst filtern, dann optional Dateiname, dann Hash.  
 Chunked Hashing: große Dateien Stück für Stück lesen.  
 Threads: Paralleles Hashing kann helfen (aber I/O ist meist der Engpass).  
