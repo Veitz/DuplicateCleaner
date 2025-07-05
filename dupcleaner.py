@@ -9,7 +9,7 @@ import time
 import signal
 
 DB_NAME = "duplicates.db"
-CHUNK_SIZE = 8192
+CHUNK_SIZE = 8192 # bestimmt die Lesemenge pro Schritt beim Hashen
 
 # --- Signal-Handling für sauberen Abbruch ---
 stop_requested = False
