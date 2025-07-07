@@ -1,5 +1,6 @@
 #!/bin/bash
 
+echo "'set -e' beenden bei Fehler wurde gesetzt"
 set -e
 
 echo "System-Paketlisten aktualisieren..."
